@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Kurs Flutter',
+      title: 'Курс Flutter Проект Тест',
       initialRoute: "/",
       routes: {
         "/": (context) => const NavigationWrapper(),
