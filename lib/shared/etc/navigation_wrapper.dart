@@ -55,7 +55,9 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
           });
         },
         items: _bottomNavBarItems,
-        type: BottomNavigationBarType.fixed, // For more than 3 items
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: Colors.amber,
+        unselectedItemColor: Colors.grey,
       ),
     );
   }
