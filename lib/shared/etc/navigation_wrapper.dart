@@ -3,6 +3,7 @@ import 'package:kurs_flutter/features/account/presentation/account_screen.dart';
 import 'package:kurs_flutter/features/feed/presentation/feed_screen.dart';
 import 'package:kurs_flutter/features/home/presentation/home_screen.dart';
 import 'package:kurs_flutter/features/services/presentation/services_screen.dart';
+import 'package:kurs_flutter/features/settings/settings_screen.dart';
 
 class NavigationWrapper extends StatefulWidget {
   const NavigationWrapper({super.key});
@@ -18,7 +19,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
     const HomeScreen(),
     const FeedScreen(),
     const ServicesScreen(),
-    const AccountScreen(),
+    const SettingsScreen(),
   ];
 
   final List<BottomNavigationBarItem> _bottomNavBarItems = [
@@ -35,18 +36,15 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
       label: 'Сервисы',
     ),
     const BottomNavigationBarItem(
-      icon: Icon(Icons.person),
-      label: 'Аккаунт',
+      icon: Icon(Icons.settings),
+      label: 'Настройки',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -56,7 +54,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
         },
         items: _bottomNavBarItems,
         type: BottomNavigationBarType.shifting,
-        selectedItemColor: Colors.amber,
+        selectedItemColor: Colors.purple.shade300,
         unselectedItemColor: Colors.grey,
       ),
     );
