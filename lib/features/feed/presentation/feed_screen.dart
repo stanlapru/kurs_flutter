@@ -73,7 +73,7 @@ class _FeedScreenState extends State<FeedScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => const HomeScreen(),
                         ));
                   },
                   trailing: IconButton(
@@ -83,7 +83,7 @@ class _FeedScreenState extends State<FeedScreen> {
                           _entriesFuture = Entry.loadEntries();
                         });
                       },
-                      icon: Icon(Icons.delete)),
+                      icon: const Icon(Icons.delete)),
                 ),
               );
             },

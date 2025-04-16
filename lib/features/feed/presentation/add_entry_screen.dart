@@ -26,11 +26,11 @@ class _AddEntryScreenState extends State<AddEntryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Добавить запись"),
-        actions: [IconButton(onPressed: saveEntry, icon: Icon(Icons.save))],
+        title: const Text("Добавить запись"),
+        actions: [IconButton(onPressed: saveEntry, icon: const Icon(Icons.save))],
       ),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Form(
           key: _formKey,
           child: Column(

@@ -11,7 +11,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   late ThemeMode currentTheme;
-  bool _isLoading = true;
+  final bool _isLoading = true;
 
   @override
   void initState() {

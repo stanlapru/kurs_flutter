@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kurs_flutter/features/account/presentation/account_screen.dart';
 import 'package:kurs_flutter/features/feed/presentation/feed_screen.dart';
 import 'package:kurs_flutter/features/home/presentation/home_screen.dart';
 import 'package:kurs_flutter/features/services/presentation/services_screen.dart';
